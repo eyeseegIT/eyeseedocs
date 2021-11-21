@@ -1,0 +1,98 @@
+.postseg-container {
+  padding: 35px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.postseg-img {
+  width: 75%;
+  max-width: 350px;
+}
+
+.usr-img {
+  width: 100%;
+  border-radius: var(--card-border-radius);
+}
+
+.postseg-details {
+  width: 98%;
+}
+
+.postseg-actions {
+  margin-top: 20px;
+}
+
+.postseg-details h1 {
+  font-size: var(--font-xxl);
+  margin: 15px 0 3px;
+}
+
+.postseg-details h2 {
+  font-size: var(--font-xl);
+  margin: 0 0 10px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.postseg-details h3 {
+  margin: 20px 0 10px;
+  font-size: var(--font-l);
+}
+
+.postseg-details p {
+  font-size: var(--font-reg);
+  margin: 5px 0;
+}
+
+.subsection-title img {
+  height: 42px;
+  margin-left: 8px;
+}
+
+.subsection-title img:first-of-type {
+  margin-left: 16px;
+}
+
+.subsection-content p,
+.subsection-content input,
+.subsection-content select {
+  font-size: var(--font-l);
+}
+
+.subsection-content input,
+.subsection-content select {
+  margin-left: 5px;
+  padding: 3px;
+}
+
+#file-input {
+  overflow: hidden;
+  position: absolute;
+  width: 0.1px;
+  height: 0.1px;
+}
+
+#file-name {
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .postseg-container {
+    padding: 35px 30px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+  }
+
+  .postseg-img {
+    width: 25%;
+    max-width: 250px;
+    margin-right: 25px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  
+}

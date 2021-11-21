@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .models import Antseg
+from .models import Antseg, Postseg
+from django.views.generic import ListView, DetailView
 
 # Create your views here.
 def home(request):
@@ -26,3 +27,13 @@ class AntsegUpdate(UpdateView):
 class AntsegDelete(DeleteView):
   model = Antseg
   success_url = "/antsegs/"
+
+class PostsegCreate(CreateView):
+  model = Postseg
+  fields = "__all__"
+
+class PostsegList(ListView):
+  model = Postseg
+
+class PostsegDetail(DetailView):
+  model = Postseg
