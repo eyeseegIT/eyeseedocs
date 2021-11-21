@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link 
+  rel="stylesheet" 
+  type="text/css" 
+  href="{% static 'css/antseg-detail.css' %}"
+/>
+{% endblock %}
+
+{% block content %}
+
+<section class="antseg-container">
+  <div class="antseg-img">
+    <img 
+      src="" 
+      alt=""
+    >
+  </div>
+  <div class="antseg-details">
+    <h1>{{ antseg.diagnosis }}</h1>
+    <p>{{ antseg.description }}</p>
+  </div>
+</section>
+
+{% endblock %}

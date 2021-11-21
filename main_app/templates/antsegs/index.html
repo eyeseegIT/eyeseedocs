@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/antseg-index.css' %}"/>
+{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+  <h1>List of Anterior Segment Conditions</h1>
+</section>
+
+<section class="card-container">
+  {% for antseg in antsegs%}
+    <div class="card">
+      <a href="{% url 'antsegs_detail' antseg.id%}">
+        <div class="card-content">
+          <div class="card-img-container">
+            <img 
+              src="{% static 'images/eye-anatomy.png' %}" 
+              alt="Cartoon of human eye anatomy"
+            >
+          </div>
+          <h2 class="card-title">{{ antseg.diagnosis }}</h2>
+        </div>
+      </a>
+    </div>
+  {% endfor %}
+</section>
+
+{% endblock %}
+</section>
