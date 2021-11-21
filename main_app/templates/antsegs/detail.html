@@ -22,6 +22,10 @@
     <h1>{{ antseg.diagnosis }}</h1>
     <p>{{ antseg.description }}</p>
   </div>
+  <div class="antseg-actions">
+    <a href="{% url 'antsegs_update' antseg.id %}" class="btn warn">Edit</a>
+    <a href="{% url 'antsegs_delete' antseg.id %}" class="btn danger">Delete</a>
+  </div>
 </section>
 
 {% endblock %}

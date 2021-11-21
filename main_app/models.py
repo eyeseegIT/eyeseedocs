@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 class Antseg(models.Model):
@@ -8,3 +9,6 @@ class Antseg(models.Model):
 
   def __str__(self):
     return self.diagnosis
+
+  def get_absolute_url(self):
+    return reverse('antsegs_detail', kwargs={'antseg_id': self.id})

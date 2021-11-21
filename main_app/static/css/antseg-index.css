@@ -10,11 +10,16 @@
   margin: 10px;
   border: var(--borders);
   box-shadow: var(--card-box-shadow);
+  text-align: center;
 }
 
 .card-content {
   padding: 10px;
   width: 100%;
+}
+
+.card-img-container img {
+  width: 250px;
 }
 
 .usr-img {
