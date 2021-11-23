@@ -27,4 +27,7 @@ urlpatterns = [
   path('antsegs/<int:antseg_id>/add_antseg_photo/', views.add_antseg_photo, name='add_antseg_photo'),
 
   path('postsegs/<int:postseg_id>/add_postseg_photo/', views.add_postseg_photo, name='add_postseg_photo'),
+
+  path('accounts/signup/', views.signup, name='signup'),
 ]
+
