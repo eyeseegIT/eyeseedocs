@@ -9,8 +9,8 @@
   <link
     rel="shortcut icon"
     type="image/png"
-    href=""
-    {% comment %} NEED FAVICON HERE {% endcomment %}
+    href="{% static 'images/eye-logo.png' %}"
+    {% comment %} FAVICON {% endcomment %}
   >
   <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
   <title>Eye See Docs</title>
@@ -22,8 +22,9 @@
     <div class="header-logo-container">
       <a href="/">
         <img 
-          src="" 
+          {% comment %} src="{% static 'images/eye-logo.png' %}"  {% endcomment %}
           alt="Eye See Docs logo"
+          class="usr-img"
         >
       </a>
     </div>

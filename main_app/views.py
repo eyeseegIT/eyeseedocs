@@ -55,12 +55,11 @@ class PostsegCreate(LoginRequiredMixin, CreateView):
 class PostsegList(LoginRequiredMixin, ListView):
   model = Postseg
 
-class PostsegDetail(LoginRequiredMixin, DetailView):
-  model = Postseg
-
-  # QUESTION??
   def get_queryset(self):
     return self.model.objects.filter(user=self.request.user)
+
+class PostsegDetail(LoginRequiredMixin, DetailView):
+  model = Postseg
 
 class PostsegUpdate(LoginRequiredMixin, UpdateView):
   model = Postseg
@@ -113,7 +112,7 @@ def signup(request):
     if form.is_valid():
       user = form.save()
       login(request, user)
-      return redirect('cats_index')
+      return redirect('antsegs_index')
     else:
       error_message = 'Invalid sign up - try again'
   form = UserCreationForm()
