@@ -19,4 +19,12 @@ urlpatterns = [
   path("postsegs/<int:pk>/", views.PostsegDetail.as_view(), name="postsegs_detail"),
 
   path("postsegs/", views.PostsegList.as_view(), name="postsegs_index"),
+
+  path("postsegs/<int:pk>/update/", views.PostsegUpdate.as_view(), name="postsegs_update"),
+
+  path("postsegs/<int:pk>/delete/", views.PostsegDelete.as_view(), name="postsegs_delete"),
+
+  path('antsegs/<int:antseg_id>/add_photo/', views.add_antseg_photo, name='add_antseg_photo'),
+
+  path('postsegs/<int:postseg_id>/add_photo/', views.add_postseg_photo, name='add_postseg_photo'),
 ]

@@ -17,10 +17,18 @@
       <a href="{% url 'antsegs_detail' antseg.id %}">
         <div class="card-content">
           <div class="card-img-container">
-            <img 
-              src="{% static 'images/eye-anatomy-2.png' %}" 
-              alt="Cartoon of human eye anatomy"
-            >
+            {% if antseg.photo.url %}
+              <img 
+                src="{{antseg.photo.url}}" 
+                alt="A photo of {{antseg.name}}"
+                class="usr-img"
+              >
+            {% else %}
+              <img 
+                src="{% static 'images/eye-anatomy.png' %}" 
+                alt="A cartoon of human eye anatomy"
+              >
+            {% endif %}
           </div>
           <h2 class="card-title">{{ antseg.diagnosis }}</h2>
         </div>

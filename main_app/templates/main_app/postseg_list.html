@@ -12,15 +12,23 @@
 </section>
 
 <section class="card-container">
-  {% for postseg in postsegs %}
+  {% for postseg in postseg_list %}
     <div class="card">
       <a href="{% url 'postsegs_detail' postseg.id %}">
         <div class="card-content">
           <div class="card-img-container">
-            <img 
-              src="{% static 'images/eye-anatomy-2.png' %}" 
-              alt="Cartoon of human eye anatomy"
-            >
+            {% if postseg.photo.url %}
+              <img 
+                src="{{postseg.photo.url}}" 
+                alt="A photo of {{postseg.name}}"
+                class="usr-img"
+              >
+            {% else %}
+              <img 
+                src="{% static 'images/eye-anatomy.png' %}" 
+                alt="A cartoon of human eye anatomy"
+              >
+            {% endif %}
           </div>
           <h2 class="card-title">{{ postseg.diagnosis }}</h2>
         </div>
