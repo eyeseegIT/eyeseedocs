@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .models import Antseg, Postseg, AntsegPhoto, PostsegPhoto
 from django.views.generic import ListView, DetailView
+from django.contrib.auth.views import LoginView
+from .models import Antseg, Postseg, AntsegPhoto, PostsegPhoto
 import uuid
 import boto3
 
@@ -9,8 +10,8 @@ S3_BASE_URL = 'https://s3.us-east-2.amazonaws.com/'
 BUCKET = 'eye-see-docs'
 
 # Create your views here.
-def home(request):
-  return render(request, 'home.html')
+class Home(LoginView):
+  template_name = 'home.html'
 
 def antsegs_index(request):
   antsegs = Antseg.objects.all()
