@@ -17,9 +17,9 @@
       <a href="{% url 'postsegs_detail' postseg.id %}">
         <div class="card-content">
           <div class="card-img-container">
-            {% if postseg.photo.url %}
+            {% if postseg.postsegphoto.url %}
               <img 
-                src="{{postseg.photo.url}}" 
+                src="{{postseg.postsegphoto.url}}" 
                 alt="A photo of {{postseg.name}}"
                 class="usr-img"
               >

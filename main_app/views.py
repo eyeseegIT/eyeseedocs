@@ -60,7 +60,7 @@ def add_antseg_photo(request, antseg_id):
       s3.upload_fileobj(photo_file, BUCKET, key)
       url = f"{S3_BASE_URL}{BUCKET}/{key}"
       photo = AntsegPhoto(url=url, antseg_id=antseg_id)
-      antseg_photo = Photo.objects.filter(antseg_id=antseg_id)
+      antseg_photo = AntsegPhoto.objects.filter(antseg_id=antseg_id)
       if antseg_photo.first():
         antseg_photo.first().delete()
       photo.save()
@@ -77,10 +77,10 @@ def add_postseg_photo(request, postseg_id):
       s3.upload_fileobj(photo_file, BUCKET, key)
       url = f"{S3_BASE_URL}{BUCKET}/{key}"
       photo = PostsegPhoto(url=url, postseg_id=postseg_id)
-      postseg_photo = Photo.objects.filter(postseg_id=postseg_id)
+      postseg_photo = PostsegPhoto.objects.filter(postseg_id=postseg_id)
       if postseg_photo.first():
         postseg_photo.first().delete()
       photo.save()
     except Exception as err:
       print('An error occurred uploading file to S3: %s' % err)
-  return redirect('postseg_detail', postseg_id=postseg_id)
+  return redirect('postsegs_detail', pk=postseg_id)
