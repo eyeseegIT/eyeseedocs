@@ -14,8 +14,8 @@
     {% if antseg.antsegphoto.url %}
       <img 
         src="{{antseg.antsegphoto.url}}" 
-        alt="A photo of {{antseg.name}}"
-        class="usr-img"
+        alt="A photo of {{antseg.name}}" 
+        class="seg-photo"
       >
     {% else %}
       <img 
@@ -23,8 +23,9 @@
         alt="A cartoon of human eye anatomy"
       >
     {% endif %}
-  </div>
-  <h3>Change {{ antseg.name }}'s photo</h3>
+  {% comment %} </div> {% endcomment %}
+  {% comment %} <div class="antseg-choose"> {% endcomment %}
+    <h3>Change photo of {{ antseg.diagnosis }}</h3>
     <p id="file-name"></p>
     <form 
       action="{% url 'add_antseg_photo' antseg.id %}"
@@ -33,16 +34,17 @@
     >
       {% csrf_token %}
       <label class="btn secondary">
-        Choose photo
+        {% comment %} Choose photo {% endcomment %}
         <input type="file" name="photo-file" id="file-input">
       </label>
       <button type="submit" class="btn submit">Upload Photo</button>
     </form>
+  </div>
   <div class="antseg-details">
     <h1>{{ antseg.diagnosis }}</h1>
     <p>{{ antseg.description }}</p>
-  </div>
-  <div class="antseg-actions">
+  {% comment %} </div>
+  <div class="antseg-actions">  {% endcomment %}
     <a href="{% url 'antsegs_update' antseg.id %}" class="btn warn">Edit</a>
     <a href="{% url 'antsegs_delete' antseg.id %}" class="btn danger">Delete</a>
   </div>

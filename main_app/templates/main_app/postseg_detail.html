@@ -17,7 +17,7 @@
       <img 
         src="{{postseg.postsegphoto.url}}" 
         alt="A photo of {{postseg.name}}"
-        class="usr-img"
+        class=class="seg-photo"
       >
     {% else %}
       <img 
@@ -26,7 +26,7 @@
       >
     {% endif %}
   </div>
-  <h3>Change {{ postseg.name }}'s photo</h3>
+  <h3>Change photo of {{ postseg.name }}</h3>
     <p id="file-name"></p>
     <form 
       action="{% url 'add_postseg_photo' postseg.id %}"

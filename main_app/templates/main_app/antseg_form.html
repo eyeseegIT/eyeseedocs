@@ -12,6 +12,14 @@
     <h1>Edit {{object.diagnosis}}</h1>
   {% else %}
     <h1>Add an Anterior Segment Condition</h1>
+    {% comment %} <div id="condition-select">
+      <label for="segment">Segment:
+        <select name="segment" id="">
+          <option value="anterior">Anterior</option>
+          <option value="posterior">Posterior</option>
+        </select>
+      </label>
+    </div> {% endcomment %}
   {% endif %}
 </div>
 <form action="" method="post" class="form-container">
