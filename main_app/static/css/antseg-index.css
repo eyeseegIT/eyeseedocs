@@ -20,6 +20,8 @@
 
 .card-img-container img {
   width: 250px;
+
+  background: red;
 }
 
 .usr-img {

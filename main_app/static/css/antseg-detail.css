@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 50px;
 }
 
 .antseg-img {
@@ -37,6 +38,10 @@
 
 .antseg-details p {
   margin-bottom: 20px;
+}
+
+.antseg-details {
+  margin-bottom: 150px;
 }
 
 .submit {
