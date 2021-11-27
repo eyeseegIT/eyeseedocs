@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  margin: 100px;
 }
 
 .antseg-img {
@@ -10,7 +10,7 @@
   max-width: 500px;
 }
 
-.seg-photo {
+.usr-img {
   width: 80%;
 }
 
@@ -34,6 +34,7 @@
 .antseg-details p {
   font-size: var(--font-reg);
   margin: 5px 0;
+  width: 400px;
 }
 
 .antseg-details p {

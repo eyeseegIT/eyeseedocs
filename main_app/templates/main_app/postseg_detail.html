@@ -17,16 +17,17 @@
       <img 
         src="{{postseg.postsegphoto.url}}" 
         alt="A photo of {{postseg.name}}"
-        class=class="seg-photo"
+        class="usr-img"
       >
     {% else %}
       <img 
         src="{% static 'images/eye-anatomy.png' %}" 
         alt="A cartoon of human eye anatomy"
+        class="usr-img"
       >
     {% endif %}
-  </div>
-  <h3>Change photo of {{ postseg.name }}</h3>
+  {% comment %} </div> {% endcomment %}
+    <h3>Change photo of {{ postseg.diagnosis }}</h3>
     <p id="file-name"></p>
     <form 
       action="{% url 'add_postseg_photo' postseg.id %}"
@@ -35,16 +36,18 @@
     >
       {% csrf_token %}
       <label class="btn secondary">
-        Choose photo
+        {% comment %} Choose photo {% endcomment %}
         <input type="file" name="photo-file" id="file-input">
       </label>
+      <br>
       <button type="submit" class="btn submit">Upload Photo</button>
     </form>
+  </div>
   <div class="postseg-details">
     <h1>{{ postseg.diagnosis }}</h1>
     <p>{{ postseg.description }}</p>
-  </div>
-  <div class="postseg-actions">
+  {% comment %} </div>
+  <div class="postseg-actions"> {% endcomment %}
     <a href="{% url 'postsegs_update' postseg.id %}" class="btn warn">Edit</a>
     <a href="{% url 'postsegs_delete' postseg.id %}" class="btn danger">Delete</a>
   </div>

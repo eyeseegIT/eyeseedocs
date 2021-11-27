@@ -15,12 +15,13 @@
       <img 
         src="{{antseg.antsegphoto.url}}" 
         alt="A photo of {{antseg.name}}" 
-        class="seg-photo"
+        class="usr-img"
       >
     {% else %}
       <img 
         src="{% static 'images/eye-anatomy.png' %}" 
         alt="A cartoon of human eye anatomy"
+        class="usr-img"
       >
     {% endif %}
   {% comment %} </div> {% endcomment %}
@@ -37,6 +38,7 @@
         {% comment %} Choose photo {% endcomment %}
         <input type="file" name="photo-file" id="file-input">
       </label>
+      <br>
       <button type="submit" class="btn submit">Upload Photo</button>
     </form>
   </div>
