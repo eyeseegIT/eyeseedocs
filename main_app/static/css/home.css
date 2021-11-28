@@ -21,11 +21,13 @@ main > section {
 
 .logo-container {
   max-width: 375px;
+  font-size: x-large;
+  padding: 80px 0 0 50px;
 }
 
-.antseg-container {
+/* .eye-container {
   width: 80%;
-}
+} */
 
 .login {
   display: flex;

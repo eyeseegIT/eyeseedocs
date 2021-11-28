@@ -12,6 +12,7 @@
     href="{% static 'images/eye-logo.png' %}"
     {% comment %} FAVICON {% endcomment %}
   >
+  <link href="https://fonts.googleapis.com/css2?family=Bayon&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
   <title>Eye See Docs</title>
   {% block head %}
@@ -22,7 +23,7 @@
     <nav>
       <ul>
         {% if user.is_authenticated %}
-          <li>
+          {% comment %} <li>
             <a href="{% url 'home' %}">
               <img 
                 src="{% static 'images/eye-logo.png' %}" 
@@ -30,7 +31,7 @@
                 id="header-logo"
               >
             </a>
-          </li>
+          </li> {% endcomment %}
           <li><a href="{% url 'antsegs_index' %}">Anterior Segment</a></li>
           <li><a href="{% url 'postsegs_index' %}">Posterior Segment</a></li>
           <li><a href="{% url 'antsegs_create' %}">Add Ant Seg Condition</a></li>

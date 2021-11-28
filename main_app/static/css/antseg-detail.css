@@ -12,6 +12,7 @@
 
 .usr-img {
   width: 80%;
+  border-radius: 5px;
 }
 
 .antseg-details h1 {

@@ -28,18 +28,17 @@ body {
   min-height: 100vh;
   background-color: navy;
   color: silver;
-  --nav-bg: rgba(104, 197, 248, .7);
-  --nav-bg-ff: rgba(104, 197, 248, .9);
+  --nav-bg: silver;
+  /* --nav-bg-ff: silver; */
   --borders: white solid 3px;
   --text-color: silver;
   --link-hover-color: white;
   --button-bg: rgb(245, 245, 245);
   --button-bg-hover: rgb(226, 226, 226);
-  --submit: rgb(26, 128, 0);
-  --warn: rgb(255, 102, 0);
+  --submit: black;
+  --warn: black;
   --danger: rgb(220, 20, 30);
-  --secondary: rgb(57, 57, 57);
-  /* --card-box-shadow: 5px 5px 6px -1px #AAA; */
+  --secondary: black;
   --card-box-shadow: 8px 8px 10px -2px #AAA;
   --font-xtreme: 4.2rem;
   --font-xxl: 3.6rem;
@@ -51,7 +50,7 @@ body {
 
 header {
   width: 100%;
-  /* background: var(--nav-bg-ff); */
+  background: var(--nav-bg);
   border-bottom: var(--borders);
 }
 
@@ -60,7 +59,8 @@ nav {
   font-size: 1.6rem;
   display: flex;
   justify-content: center;
-  /* margin: 10px; */
+  margin: 0px 30px;
+  font-family: 'Bayon', sans-serif;
 }
 
 ul {
@@ -92,11 +92,11 @@ nav ul {
 }
 
 nav li {
-  padding: 10px 50px;
+  padding: 5px 50px;
 }
 
 #header-logo {
-  width: 70px;
+  width: 50px;
 }
 
 /* .header-logo-container {
@@ -113,8 +113,8 @@ nav li {
 
 .btn {
   font-size: var(--font-l);
-  padding: 8px 16px;
-  border-radius: 6px;
+  padding: 7px 6px;
+  border-radius: 5px;
   border-width: 2px;
   border-style: solid;
   text-decoration: none;
@@ -161,6 +161,10 @@ nav li {
 
 .page-header img:first-of-type {
   margin-left: 20px;
+}
+
+main h1 {
+  font-family: 'Bayon', sans-serif;
 }
 
 /* @media only screen and (min-width: 768px) {
