@@ -41,6 +41,7 @@ body {
   --secondary: black;
   --card-box-shadow: 8px 8px 10px -2px #AAA;
   --font: 'Bebas Neue', cursive;
+  --font-input: 'Gochi Hand', cursive;
   --font-xtreme: 4.2rem;
   --font-xxl: 3.6rem;
   --font-xl: 2.4rem;
@@ -174,5 +175,13 @@ main h2 {
 }
 
 main p {
-  font-family: 'Gochi Hand', cursive;
+  font-family: var(--font-input);
+}
+
+label {
+  font-family: var(--font);
+}
+
+input, textarea {
+  font-family: var(--font-input);
 }
