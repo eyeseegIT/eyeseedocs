@@ -15,22 +15,17 @@
   {% endif %}
 </div>
 
-<form action="" method="post" class="form-container">
+<form action="{% url 'antsegs_create' %}" method="post" class="form-container">
   {% csrf_token %}
   <table>
-    {% comment %} <th id="select-segment">
+    <th id="select-segment">
       <label for="segment">Segment:</label></th>
         <td>
           <select name="segment">
             <option value="anterior">Anterior</option>
             <option value="posterior">Posterior</option>
-          {% if value == "anterior" %}
-            <form action="{% url 'antsegs_create' %}">
-          {% else %}
-            <form action="{% url 'postsegs_create' %}">
-          {% endif %}
           </select>
-        </td> {% endcomment %}
+        </td> 
     {{ form.as_table }}
   </table>
   <button type="submit" class="btn submit">Submit!</button>

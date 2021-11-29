@@ -8,7 +8,9 @@ urlpatterns = [
 
   path("antsegs/<int:antseg_id>/", views.antsegs_detail, name="antsegs_detail"),
 
-  path("antsegs/create/", views.AntsegCreate.as_view(), name="antsegs_create"),
+  path("antsegs/create/", views.antsegs_create, name="antsegs_create"),
+
+  path("segments/create/", views.SegmentCreate.as_view(), name="segment_create"),
 
   path("antsegs/<int:pk>/update/", views.AntsegUpdate.as_view(), name="antsegs_update"),
 
