@@ -127,7 +127,7 @@ STATIC_URL = '/static/'
 
 LOGIN_URL = 'home'
 
-LOGIN_REDIRECT_URL = 'antsegs_index' # MIGHT NEED TO CHANGE THIS!!
+LOGIN_REDIRECT_URL = 'home'
 
 LOGOUT_REDIRECT_URL = 'home'
 
