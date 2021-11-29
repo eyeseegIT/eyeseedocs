@@ -1,13 +1,14 @@
 .antseg-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 100px;
+  display: block;
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
 }
 
 .antseg-img {
-  width: 75%;
+  width: 90%;
   max-width: 500px;
+  padding: 30px 0px 0px 70px;
 }
 
 .usr-img {
@@ -17,106 +18,82 @@
 
 .antseg-details h1 {
   font-size: var(--font-xxl);
-  margin: 15px 0 3px;
+  margin: 20px 0px 0px 0px;
 }
 
 .antseg-details h2 {
   font-size: var(--font-xl);
-  margin: 0 0 10px;
-  margin-top: 0;
-  margin-bottom: 10px;
 }
 
 .antseg-details h3 {
-  margin: 20px 0 10px;
   font-size: var(--font-l);
 }
 
 .antseg-details p {
   font-size: var(--font-reg);
   margin: 5px 0;
-  width: 400px;
+  width: 80%;
 }
 
 .antseg-details p {
   margin-bottom: 20px;
+  font-size: 1.8rem;
 }
 
 .antseg-details {
-  margin-bottom: 150px;
+  margin: 0 auto;
+  padding: 0px 0px 0px 70px;
 }
 
 .submit {
   margin-top: 20px;
 }
-/* 
-.antseg-img {
-  width: 75%;
-  max-width: 350px;
-}
-
-.usr-img {
-  width: 50%;
-  border-radius: var(--card-border-radius);
-}
-
-.antseg-details {
-  width: 98%;
-}
-
-.antseg-actions {
-  margin-top: 20px;
-}
-
-.antseg-details h1 {
-  font-size: var(--font-xxl);
-  margin: 15px 0 3px;
-}
-
-.antseg-details h2 {
-  font-size: var(--font-xl);
-  margin: 0 0 10px;
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-.antseg-details h3 {
-  margin: 20px 0 10px;
-  font-size: var(--font-l);
-}
-
-.antseg-details p {
-  font-size: var(--font-reg);
-  margin: 5px 0;
-}
-
-#file-input {
-  overflow: hidden;
-  position: absolute;
-  width: 0.1px;
-  height: 0.1px;
-}
-
-#file-name {
-  margin-bottom: 10px;
-}
 
 @media only screen and (min-width: 768px) {
-  .antseg-container {
-    padding: 35px 30px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: start;
+  .antseg-img {
+    width: 90%;
+    max-width: 500px;
+    padding: 30px 0px 0px 200px;
   }
 
-  .antseg-img {
-    width: 25%;
-    max-width: 250px;
-    margin-right: 25px;
+  .usr-img {
+    width: 100%;
+    border-radius: 5px;
   }
+
+  .antseg-details {
+    margin: 0 auto;
+    padding: 0px 0px 0px 200px;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
+  .antseg-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 0px 0px 250px;
+  }
   
-} */
+  .antseg-img {
+    width: 90%;
+    max-width: 500px;
+    padding: 0px 0px 0px 80px;
+  }
+
+  .usr-img {
+    width: 90%;
+    border-radius: 5px;
+  }
+  
+  .antseg-details {
+    margin-bottom: 150px;
+    padding: 0px 0px 0px 0px;
+    width: 50%;
+  }
+  
+  .submit {
+    margin-top: 20px;
+  }
+} 
 

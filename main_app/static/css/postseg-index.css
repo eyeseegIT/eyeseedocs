@@ -46,7 +46,8 @@
   color: black;
   visibility: hidden;
   opacity: 0;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
+  font-weight: bold;
 }
 
 .card > a {
