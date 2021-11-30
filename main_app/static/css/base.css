@@ -29,7 +29,6 @@ body {
   background-color: navy;
   color: silver;
   --nav-bg: silver;
-  /* --nav-bg-ff: silver; */
   --borders: white solid 3px;
   --text-color: silver;
   --link-hover-color: white;
@@ -40,8 +39,8 @@ body {
   --danger: rgb(220, 20, 30);
   --secondary: black;
   --card-box-shadow: 8px 8px 10px -2px #AAA;
-  --font: 'Bebas Neue', cursive;
-  --font-input: 'Gochi Hand', cursive;
+  --font: 'IM Fell DW Pica SC', serif;
+  --font-input: 'Marcellus SC', serif;
   --font-xtreme: 4.2rem;
   --font-xxl: 3.6rem;
   --font-xl: 2.4rem;
@@ -111,7 +110,7 @@ nav li {
 }
 
 .btn {
-  font-size: var(--font-l);
+  font-size: var(--font-reg);
   padding: 7px 16px;
   border-radius: 5px;
   border-width: 2px;

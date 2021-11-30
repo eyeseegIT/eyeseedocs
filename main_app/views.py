@@ -58,14 +58,6 @@ class AntsegDelete(LoginRequiredMixin, DeleteView):
   model = Antseg
   success_url = "/antsegs/"
 
-# class PostsegCreate(LoginRequiredMixin, CreateView):
-#   model = Postseg
-#   fields = ["diagnosis", "description"]
-
-#   def form_valid(self, form):
-#     form.instance.user = self.request.user  
-#     return super().form_valid(form)
-
 class PostsegList(LoginRequiredMixin, ListView):
   model = Postseg
 

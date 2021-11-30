@@ -26,7 +26,6 @@
         class="usr-img"
       >
     {% endif %}
-  {% comment %} </div> {% endcomment %}
     <h3>Change photo of {{ postseg.diagnosis }}</h3>
     <p id="file-name"></p>
     <form 
@@ -36,7 +35,6 @@
     >
       {% csrf_token %}
       <label class="btn secondary">
-        {% comment %} Choose photo {% endcomment %}
         <input type="file" name="photo-file" id="file-input">
       </label>
       <br>
@@ -46,8 +44,6 @@
   <div class="postseg-details">
     <h1>{{ postseg.diagnosis }}</h1>
     <p>{{ postseg.description }}</p>
-  {% comment %} </div>
-  <div class="postseg-actions"> {% endcomment %}
     <a href="{% url 'postsegs_update' postseg.id %}" class="btn warn">Edit</a>
     <a href="{% url 'postsegs_delete' postseg.id %}" class="btn danger">Delete</a>
   </div>

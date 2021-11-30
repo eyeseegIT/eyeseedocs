@@ -7,12 +7,19 @@
 
 {% block content %}
 
+
+
 <section class="logo-container">
+  {% if user.is_authenticated %}
+    <h1>Welcome, {{ user.username }}! </h1>
+  {% endif %}
   <div class="eye-container">
     <img src="{% static 'images/eye-logo.png' %}" alt="Eye See Docs logo" />
   </div>
   <h1>Eye See Docs</h1>
 </section>
+
+
 
 {% if not user.is_authenticated %}
   <section>

@@ -16,8 +16,6 @@ urlpatterns = [
 
   path("antsegs/<int:pk>/delete/", views.AntsegDelete.as_view(), name="antsegs_delete"),
 
-  # path("postsegs/create/", views.PostsegCreate.as_view(), name="postsegs_create"),
-
   path("postsegs/<int:pk>/", views.PostsegDetail.as_view(), name="postsegs_detail"),
 
   path("postsegs/", views.PostsegList.as_view(), name="postsegs_index"),

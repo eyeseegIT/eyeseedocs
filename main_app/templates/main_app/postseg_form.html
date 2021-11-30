@@ -1,4 +1,4 @@
-{% comment %} {% extends 'base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 
 {% block head %}
@@ -7,19 +7,38 @@
 
 {% block content %}
 
-<div class="page-header">
-  {% if object %}
-    <h1>Edit {{object.diagnosis}}</h1>
-  {% else %}
-    <h1>Add a Posterior Segment Condition</h1>
-  {% endif %}
-</div>
-<form action="" method="post" class="form-container">
-  {% csrf_token %}
-  <table>
-    {{ form.as_table }}
-  </table>
-  <button type="submit" class="btn submit">Submit!</button>
-</form>
 
-{% endblock %} {% endcomment %}
+{% if object %}
+  <div class="page-header">
+    <h1>Edit {{object.diagnosis}}</h1>
+  </div>
+  <form action="" method="post" class="form-container">
+    {% csrf_token %}
+    <table>
+      {{ form.as_table }}
+    </table>
+    <button type="submit" class="btn submit">Submit!</button>
+  </form>
+{% else %}
+  <div class="page-header">
+    <h1>Add a Condition</h1>
+  </div>
+  <form action="{% url 'segment_create' %}" method="post" class="form-container">
+    {% csrf_token %}
+    <table>
+      <th id="select-segment">
+        <label for="segment">Segment:</label></th>
+          <td>
+            <select name="segment" id="choose-segment" required>
+              <option selected disabled hidden style='display: none' value=''>--Choose Segment--</option>
+              <option value="anterior">Anterior</option>
+              <option value="posterior">Posterior</option>
+            </select>
+          </td> 
+      {{ form.as_table }}
+    </table>
+    <button type="submit" class="btn submit">Submit!</button>
+  </form>
+{% endif %}
+
+{% endblock %}

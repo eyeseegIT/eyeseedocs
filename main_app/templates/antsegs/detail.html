@@ -24,8 +24,6 @@
         class="usr-img"
       >
     {% endif %}
-  {% comment %} </div> {% endcomment %}
-  {% comment %} <div class="antseg-choose"> {% endcomment %}
     <h3>Change photo of {{ antseg.diagnosis }}</h3>
     <p id="file-name"></p>
     <form 
@@ -35,7 +33,6 @@
     >
       {% csrf_token %}
       <label class="btn secondary">
-        {% comment %} Choose photo {% endcomment %}
         <input type="file" name="photo-file" id="file-input">
       </label>
       <br>
@@ -45,8 +42,6 @@
   <div class="antseg-details">
     <h1>{{ antseg.diagnosis }}</h1>
     <p>{{ antseg.description }}</p>
-  {% comment %} </div>
-  <div class="antseg-actions">  {% endcomment %}
     <a href="{% url 'antsegs_update' antseg.id %}" class="btn warn">Edit</a>
     <a href="{% url 'antsegs_delete' antseg.id %}" class="btn danger">Delete</a>
   </div>

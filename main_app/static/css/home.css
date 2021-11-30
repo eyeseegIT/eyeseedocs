@@ -1,3 +1,7 @@
+nav {
+  text-align: center;
+}
+
 main {
   display: flex;
   align-items: center;
@@ -8,7 +12,6 @@ main {
 
 main > section {
   width: 100%;
-  padding: 10px 8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,12 +24,13 @@ main > section {
 
 .logo-container {
   max-width: 375px;
-  padding: 80px 0 0 50px;
+  padding: 50px 0 0 0px;
   font-size: x-large;
 }
 
 img {
   border-radius: 50%;
+  width: 100%;
 }
 
 .logo-container h1 {
@@ -38,7 +42,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 90%;
 }
 
 .login h1 {
