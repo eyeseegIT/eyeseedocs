@@ -8,15 +8,15 @@ urlpatterns = [
 
   path("antsegs/<int:antseg_id>/", views.antsegs_detail, name="antsegs_detail"),
 
-  path("antsegs/create/", views.antsegs_create, name="antsegs_create"),
+  path("antsegs/create/", views.segment_create, name="segment_create"),
 
-  path("segments/create/", views.SegmentCreate.as_view(), name="segment_create"),
+  path("conditions/create/", views.ConditionCreate.as_view(), name="conditions_create"),
 
   path("antsegs/<int:pk>/update/", views.AntsegUpdate.as_view(), name="antsegs_update"),
 
   path("antsegs/<int:pk>/delete/", views.AntsegDelete.as_view(), name="antsegs_delete"),
 
-  path("postsegs/create/", views.PostsegCreate.as_view(), name="postsegs_create"),
+  # path("postsegs/create/", views.PostsegCreate.as_view(), name="postsegs_create"),
 
   path("postsegs/<int:pk>/", views.PostsegDetail.as_view(), name="postsegs_detail"),
 

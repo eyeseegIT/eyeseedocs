@@ -21,26 +21,24 @@
 <body>
   <header>
     <nav>
-      <ul>
-        {% if user.is_authenticated %}
-          {% comment %} <li>
-            <a href="{% url 'home' %}">
-              <img 
-                src="{% static 'images/eye-logo.png' %}" 
-                alt="The Eye Docs logo" 
-                id="header-logo"
-              >
-            </a>
-          </li>  {% endcomment %}
-          <li><a href="{% url 'antsegs_index' %}">Anterior Segment</a></li>
-          <li><a href="{% url 'postsegs_index' %}">Posterior Segment</a></li>
-          <li><a href="{% url 'segment_create' %}">Add Ant Seg Condition</a></li>
-          <li><a href="{% url 'postsegs_create' %}">Add Post Seg Condition</a></li>
-          <li><a href="{% url 'logout' %}">Log out</a></li>
-        {% else %}
-          <li><a href="{% url 'home' %}">Login</a></li>
-          <li><a href="{% url 'signup' %}">Sign Up</a></li>
-        {% endif %}  
+      {% if user.is_authenticated %}
+        <div>
+          <a href="{% url 'home' %}">
+            <img 
+              src="{% static 'images/eye-logo.png' %}" 
+              alt="The Eye Docs logo" 
+              id="header-logo">
+          </a>
+        </div>
+        <ul>
+        <li><a href="{% url 'antsegs_index' %}">Anterior Segment</a></li>
+        <li><a href="{% url 'postsegs_index' %}">Posterior Segment</a></li>
+        <li><a href="{% url 'conditions_create' %}">Add a Condition</a></li>
+        <li><a href="{% url 'logout' %}">Log out</a></li>
+      {% else %}
+        <li><a href="{% url 'home' %}">Login</a></li>
+        <li><a href="{% url 'signup' %}">Sign Up</a></li>
+      {% endif %}  
       </ul>
     </nav>
   </header>

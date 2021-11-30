@@ -28,7 +28,8 @@ def antsegs_detail(request, antseg_id):
   antseg = Antseg.objects.get(id=antseg_id)
   return render(request, "antsegs/detail.html", { "antseg": antseg})
 
-def antsegs_create(request):
+@login_required
+def segment_create(request):
   segment = request.POST.get("segment")
   if segment == "anterior":
     anterior = Antseg()
@@ -45,7 +46,7 @@ def antsegs_create(request):
     posterior.save()
     return redirect("postsegs_detail", pk = posterior.id)
 
-class SegmentCreate(LoginRequiredMixin, CreateView):
+class ConditionCreate(LoginRequiredMixin, CreateView):
   model = Antseg
   fields = ["diagnosis", "description"]
 
@@ -57,13 +58,13 @@ class AntsegDelete(LoginRequiredMixin, DeleteView):
   model = Antseg
   success_url = "/antsegs/"
 
-class PostsegCreate(LoginRequiredMixin, CreateView):
-  model = Postseg
-  fields = ["diagnosis", "description"]
+# class PostsegCreate(LoginRequiredMixin, CreateView):
+#   model = Postseg
+#   fields = ["diagnosis", "description"]
 
-  def form_valid(self, form):
-    form.instance.user = self.request.user  
-    return super().form_valid(form)
+#   def form_valid(self, form):
+#     form.instance.user = self.request.user  
+#     return super().form_valid(form)
 
 class PostsegList(LoginRequiredMixin, ListView):
   model = Postseg
